@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else condition</title>
+</head>
+<body>
+    <h1>Check the sum is greater or less than 15</h1>
+    <input type="number" id="n1" placeholder="Enter 1st number"> <br><br>
+    <input type="number" id="n2" placeholder="Enter 2nd number"> <br><br>
+    <button onclick="sumchk()">check</button>
+    <h3 id="rst"></h3>
+
+    <script>
+        function sumchk(){
+            var a = parseInt(document.getElementById("n1").value);
+            var b = parseInt(document.getElementById("n2").value);
+            
+            if((a+b)>15){
+                document.getElementById("rst").innerHTML="The sum of "+a+" and "+b+" is "+ (a+b) +" and "+" it is greater than 15";
+                document.getElementById("rst").style.color="green";
+            }
+            else if((a+b)==15){
+                document.getElementById("rst").innerHTML="The sum of "+a+" and "+b+" is "+ (a+b) +" and "+" it is Equal to 15";
+                document.getElementById("rst").style.color="black";
+            }
+            else{
+                document.getElementById("rst").innerHTML="The sum of "+a+" and "+b+" is "+ (a+b) +" and "+" it is less than 15";
+                document.getElementById("rst").style.color="red";
+            }
+        }
+    </script>
+
+</body>
+</html>
